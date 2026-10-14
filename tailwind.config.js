@@ -1,0 +1,135 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        body: ['Poppins', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        creme: {
+          50: '#FFF8F0',
+          100: '#FFF0E0',
+          200: '#FFE0C0',
+          300: '#FFD0A0',
+          400: '#FFC080',
+          500: '#FFB060',
+          600: '#F0A040',
+          700: '#D08020',
+          800: '#A06010',
+          900: '#704008',
+        },
+        berry: {
+          50: '#FFF0F3',
+          100: '#FFE0E8',
+          200: '#FFC0D0',
+          300: '#FF90B0',
+          400: '#FF6080',
+          500: '#E83060',
+          600: '#C01040',
+          700: '#900C30',
+          800: '#600820',
+          900: '#300410',
+        },
+        cocoa: {
+          50: '#FAF6F2',
+          100: '#F0E8E0',
+          200: '#E0D0C0',
+          300: '#C8A888',
+          400: '#A08060',
+          500: '#806040',
+          600: '#604030',
+          700: '#402820',
+          800: '#28180F',
+          900: '#180C08',
+        },
+        mint: {
+          50: '#F0FFF8',
+          100: '#E0FFF0',
+          200: '#C0FFE0',
+          300: '#80FFC0',
+          400: '#40E0A0',
+          500: '#20C080',
+          600: '#108060',
+          700: '#086040',
+          800: '#044030',
+          900: '#022018',
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+        'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
+        'fade-in-right': 'fadeInRight 0.4s ease-out forwards',
+        'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+        'scale-in': 'scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+        'bounce-in': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+        'float': 'float 3s ease-in-out infinite',
+        'spin-slow': 'spin 20s linear infinite',
+        'pulse-ring': 'pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'wiggle': 'wiggle 0.5s ease-in-out infinite',
+        'zoom-in': 'zoomIn 0.3s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(100%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.8)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.3)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        pulseRing: {
+          '0%': { transform: 'scale(0.95)', opacity: '1' },
+          '100%': { transform: 'scale(1.4)', opacity: '0' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        zoomIn: {
+          '0%': { opacity: '0', transform: 'scale(1.1)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
